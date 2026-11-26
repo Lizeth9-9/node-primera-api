@@ -32,7 +32,7 @@ export const crearServicio = async (req, resp) => {
 
 // put actualizar
 
-export const actualizarServicio = async (req, resp) => {
+export const actualizarServicioId = async (req, resp) => {
     try {
         resp.status(200).json({
             ok: true,
@@ -44,7 +44,7 @@ export const actualizarServicio = async (req, resp) => {
 };
 
 // delete servicio
-export const borrarServicio = async (req, resp) => {
+export const borrarServicioId = async (req, resp) => {
     try {
         resp.status(200).json({
             ok: true,
@@ -55,60 +55,3 @@ export const borrarServicio = async (req, resp) => {
     }
 };
 
-///////////////////////////////////////////////////////////////////////////////////
-
-//get de all productos en controllers
-
-export const todosLosProductos = async (req, resp) => {
-    try {
-        resp.status(200).json({
-            ok: true,
-            mensaje: "aca se reciben los productos",
-        });
-    } catch (error) {
-        resp.status(500).json({
-            ok: true,
-            mensaje: "Error del servidor.",
-        });
-    }
-};
-// POST crear los productos
-
-export const crearProducto = async (req, resp) => {
-    try {
-        resp.status(201).json({
-            ok: true,
-            mensaje: "creado correctamente",
-        });
-    } catch (error) {
-        resp.status(500).json({
-            ok: false,
-            mensaje: "Error del servidor.",
-        });
-    }
-};
-
-// put actualizar
-
-export const actualizarProducto = async (req, resp) => {
-    try {
-        resp.status(200).json({
-            ok: true,
-            mensaje: `servicio actualizado`,
-        });
-    } catch (error) {
-        resp.status(500).json({ ok: false, mensaje: "Error del servidor." });
-    }
-};
-
-// delete servicio
-export const borrarProducto = async (req, resp) => {
-    try {
-        resp.status(200).json({
-            ok: true,
-            mensaje: `servicio eliminado`,
-        });
-    } catch (error) {
-        resp.status(500).json({ ok: false, mensaje: "Error del servidor." });
-    }
-};
